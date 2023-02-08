@@ -19,7 +19,7 @@ do {
 
 //Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
 
-const pcNumber = randomNumber();
+const pcNumber = randomNumber(1, 5);
 console.log(pcNumber);
 
 //Sommiamo i due numeri
@@ -41,8 +41,8 @@ if (
 
 //FUNZIONI
 
-function randomNumber() {
-	const number = Math.floor(Math.random() * 5 + 1);
+function randomNumber(min, max) {
+	const number = Math.floor(Math.random() * max + min);
 	return number;
 }
 

@@ -31,8 +31,8 @@ console.log(sum);
 //Comunichiamo all’utente chi ha vinto. (decidete voi come)
 
 if (
-	(evenOddCheck(sum) && userChoice === "pari") ||
-	(evenOddCheck(sum) === false && userChoice === "dispari")
+	(evenOddCheck(sum, 2) && userChoice === "pari") ||
+	(evenOddCheck(sum, 2) === false && userChoice === "dispari")
 ) {
 	toPrint(`<div>HAI VINTO!</div>`);
 } else {
@@ -46,8 +46,8 @@ function randomNumber(min, max) {
 	return number;
 }
 
-function evenOddCheck(total) {
-	let resto = total % 2;
+function evenOddCheck(total, divisor) {
+	let resto = total % divisor;
 	return resto === 0;
 }
 

@@ -1,13 +1,21 @@
 // PARI O DISPARI
 //L’utente sceglie pari o dispari
 
-const userChoice = prompt("Scegli pari o dispari").toLowerCase();
-console.log(userChoice);
+let userChoice;
+
+do {
+	userChoice = prompt("Scegli pari o dispari").toLowerCase();
+	console.log(userChoice);
+} while (userChoice != "pari" && userChoice != "dispari");
 
 //e inserisce un numero da 1 a 5.
 
-const userNumber = parseInt(prompt("Inerisci un numero da 1 a 5"));
-console.log(userNumber);
+let userNumber;
+
+do {
+	userNumber = parseInt(prompt("Inerisci un numero da 1 a 5"));
+	console.log(userNumber);
+} while (isNaN(userNumber) || userNumber > 5);
 
 //Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
 
